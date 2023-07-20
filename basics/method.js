@@ -20,7 +20,7 @@ app.get('/user', (req, res) => {
 
 // POST --> to send data to BE
 
-app.post('/addUser', (req, res) => { 
+app.post('/user', (req, res) => { 
     res.json({
         message: "data recived sucessfully",
         user : req.body
@@ -33,7 +33,7 @@ app.post('/addUser', (req, res) => {
 
 // PATCH --> To usdpate the data 
 
-app.patch('/updateUser', (req, res) => { 
+app.patch('/user', (req, res) => { 
     let dataToBeUpdated = req.body;
     for (key in dataToBeUpdated) {
         user[key] = dataToBeUpdated[key];
@@ -48,7 +48,7 @@ app.patch('/updateUser', (req, res) => {
 
 // DELETE --> To Delete the data  
 
-app.delete("/deleteUser", (req, res) => { 
+app.delete("/user", (req, res) => { 
 
     user = {}
     res.json({
