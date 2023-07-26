@@ -14,13 +14,17 @@ router
     .get(getUser)
     .post(postUser);
 
-function getUser(req, res) {
+async function getUser(req, res) {
     
-    let allUser =  fetchUser();
-    res.json({
-        message: "user data fetched successfully",
-        users : allUser
+    await users.find().then(function (db) {
+        console.log("users found");
+        console.log(db);
+        res.json({
+            message: "user data fetched successfully",
+            users: db
+        });
     });
+
 
 }
 function postUser(req, res) {
@@ -114,8 +118,9 @@ async function createUser(user) {
 }
 
 async function fetchUser() {
-    let Allusers = await users.find().then(function (db) { 
+    const Allusers = await users.find().then(function (db) { 
         console.log("users found");
+        console.log(Allusers);
     })
     
 }
