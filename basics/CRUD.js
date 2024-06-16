@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 
 app.listen(3000);
-app.use(express.json()); // **ALWAYS use if u r using JSON in POST request
+app.use(express.json()); // **ALWAYS use if u are using JSON in POST request
 const authRouter = express.Router();
 
 app.use('/auth', authRouter);

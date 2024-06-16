@@ -24,8 +24,6 @@ async function getUser(req, res) {
             users: db
         });
     });
-
-
 }
 function postUser(req, res) {
     let user = req.body;
@@ -124,4 +122,3 @@ async function fetchUser() {
 
 
 
- 
