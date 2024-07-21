@@ -77,5 +77,4 @@ function getIstTime() {
     var ISTTime = new Date(currentTime.getTime() + (ISTOffset + currentOffset)*60000);
 
     return ISTTime;
-
 }
